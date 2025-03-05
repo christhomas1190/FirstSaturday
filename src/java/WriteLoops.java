@@ -142,11 +142,14 @@ public class WriteLoops {
     // After the loop is done, print “Honey, I’m Home!”
     public int driveHome() {
         int w = 0;
+            while(!gpsCurrentLocation().equals("Home")) {
+                driveSomeMore();
 
-        // you need to use a .equals for two Strings.
+                // you need to use a .equals for two Strings.
 
-            // calling
-            w = w + 1;
+                // calling
+                w = w + 1;
+            }
             // each time through the inner loop
         
 
