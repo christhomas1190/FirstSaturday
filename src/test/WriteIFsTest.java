@@ -19,8 +19,12 @@ public class WriteIFsTest
     /**
      * Default constructor for test class src.test.java.WriteIFsTest
      */
-    public WriteIFsTest()
-    {
+    @Test
+    public void WriteIFsTest() {
+        WriteIFs writeIfs = new WriteIFs();
+        boolean actual = writeIfs.isAlive(true);
+        assertEquals(true, true );
+
     }
 
     /**
