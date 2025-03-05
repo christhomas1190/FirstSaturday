@@ -162,19 +162,22 @@ public class WriteLoops {
     // is less than “highestScore” and if it is, adds “currentScore” to
     // "runningScore"
     // and then sets “currentScore” to “gameNextScore()”
-    public int checkGameScore() {
+    public boolean checkGameScore() {
         int w = 0;
         int highestScore = 236;
         int currentScore = gameNextScore();
         int runningScore = 0;
 
         // do your while loop here
- 
+        while(runningScore<highestScore) {
+            runningScore  += currentScore;
+
+
             // calling
             w = w + 1;
             // each time through the inner loop
-        
-        return w; // >= 3;
+        }
+        return w >= 3;
     }
 
     // Rewrite the previous WHILE loop as a DO..WHILE loop.
@@ -184,14 +187,18 @@ public class WriteLoops {
         int highestScore = 236;
         int currentScore = gameNextScore();
         int runningScore = 0;
+            do{currentScore+=runningScore;
+                    runningScore =gameNextScore();
 
+            }
+            while(currentScore<highestScore);
         // do your while loop here
-
-            // calling
             w = w + 1;
+            // calling
+
             // each time through the inner loop
 
-        return w >= 3;
+        return w>= 3;
     }
 
     // Write a WHILE loop that checks “serverIsRunning()” and if true
@@ -201,10 +208,17 @@ public class WriteLoops {
     public int checkServerStatus() {
         int w = 0;
         String adminPhoneNumber = "+1 202 456 1111";
-        
+        while (serverIsRunning()) {
+            waitFor(5);
+            w = w + 1;
+
+            if (serverIsRunning()) {
+                sendEmergencyText("Help", adminPhoneNumber);
+                tryServerRestart("restart server", adminPhoneNumber);
+            }
+        }
 
         // calling
-        w = w + 1;
         // each time through the inner loop
         
         return w;
@@ -214,14 +228,16 @@ public class WriteLoops {
     // Write a WHILE loop that checks “i” is less than 50,
     // and if it is, add 7 to “i”
     public int loop50by7() {
-        int w = 0;
-
-
-            // calling
-            w = w + 1;
+        int i = 7;
+//        for(int i = 7; i<50; i++) {
+            while (i < 50) {
+                // calling
+                i = i + 7;
+            }
+//        }
             // each time through the inner loop
         
-        return w;
+        return i;
     }
 
     int[] threes_array = { 3, 6, 9, 12, 15, 18, 21 };
@@ -234,15 +250,17 @@ public class WriteLoops {
         int sumOfThrees = 0;
 
         // this is a so called Enhanced for loop
-        for (int index : threes_array) {
-            sumOfThrees = sumOfThrees + threes_array[index];
+//        for (int index : threes_array) {
+        for (int i = 0; i <= threes_array.length; i++) {
+             sumOfThrees = sumOfThrees + threes_array[i];
+
             // calling
             w = w + 1;
             // each time through the inner loop
-        }
+
         System.out.print("The Sum is ");
         System.out.println(sumOfThrees);
-
+    }
         return w;
     }
 
