@@ -14,22 +14,22 @@ public class WriteLoops {
 
     public int oneToFive() {
         int w = 0;
-
+    for(int i = 1; i <=5;i++)
         // Write a FOR loop that counts from 1 to 10.
             // calling
             w = w + 1;
             // each time through the loop
-
         // this will tell the test how many times the loop executed.
         return w;
     }
 
     public int oneToTen() {
         int w = 0;
+        for(int i = 1; i <=10;i++)
 
         // Write a FOR loop that counts from 1 to 10.
         // calling
-        w = w + 1;
+            w = w + 1;
         // each time through the loop
         
         return w;
