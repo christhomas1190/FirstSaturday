@@ -31,7 +31,7 @@ public class WriteLoops {
         // calling
             w = w + 1;
         // each time through the loop
-        
+
         return w;
     }
 
@@ -113,7 +113,7 @@ public class WriteLoops {
                 // calling
 //                w = w + 1;
             // each time through the inner loop
-        
+
         return w;
     }
 
@@ -228,16 +228,16 @@ public class WriteLoops {
     // Write a WHILE loop that checks “i” is less than 50,
     // and if it is, add 7 to “i”
     public int loop50by7() {
-        int i = 7;
-//        for(int i = 7; i<50; i++) {
-            while (i < 50) {
-                // calling
-                i = i + 7;
-            }
-//        }
+        int w = 0;
+      int i = 7;
+        while(i<50) {
+            i=i+7;
+            // calling
+            w = w + 1;
+        }
             // each time through the inner loop
         
-        return i;
+        return w;
     }
 
     int[] threes_array = { 3, 6, 9, 12, 15, 18, 21 };
@@ -250,17 +250,15 @@ public class WriteLoops {
         int sumOfThrees = 0;
 
         // this is a so called Enhanced for loop
-//        for (int index : threes_array) {
-        for (int i = 0; i <= threes_array.length; i++) {
-             sumOfThrees = sumOfThrees + threes_array[i];
-
+        for (int index : threes_array) {
+            sumOfThrees = sumOfThrees + threes_array[index];
             // calling
             w = w + 1;
             // each time through the inner loop
-
+        }
         System.out.print("The Sum is ");
         System.out.println(sumOfThrees);
-    }
+
         return w;
     }
 
@@ -270,12 +268,13 @@ public class WriteLoops {
     public int rewriteFooAsFor() {
         int w = 0;
         int sumOfThrees = 0;
+        for (int i = 0; i<=threes_array.length;i++) {
+            sumOfThrees = sumOfThrees + threes_array[i];
 
- 
             // calling
             w = w + 1;
             // each time through the inner loop
-        
+        }
         System.out.print("The Sum is ");
         System.out.println(sumOfThrees);
 
@@ -286,13 +285,14 @@ public class WriteLoops {
     // rewrite the loop inside of "foo()" as a 'while' loop
     public int rewriteFooAsWhile() {
         int w = 0;
+        int i =7;
         int sumOfThrees = 0;
-
- 
-            // calling
-            w = w + 1;
-            // each time through the inner loop
-        
+            while (i < 50) {
+                sumOfThrees += threes_array[i];
+                // calling
+                w = w + 1;
+                // each time through the inner loop
+            }
         System.out.print("The Sum is ");
         System.out.println(sumOfThrees);
 
@@ -309,11 +309,14 @@ public class WriteLoops {
     public int manageYardAndJunior() {
         int w = 0;
         boolean onTime = true;
-
-        // ADD YOUR CODE here.
- 
-            // be sure to call
-            w = w + 1;
+        boolean yardNeedsMowed = true;
+            while (isSummer()) {
+                // ADD YOUR CODE here.
+                if (yardNeedsMowed) {
+                    yellAtJuniorToMowLawn();
+                }
+                w = w + 1;
+            }
             // each time inside the loop
         
         return w;
@@ -327,12 +330,12 @@ public class WriteLoops {
     public int tallyVote1() {
         int w = 0;
         int numberOfVotes = voteTallies.length;
-
- 
+        for(int i=0; i<numberOfVotes;i++) {
+            System.out.println(voteTallies[i]);
             // calling
             w = w + 1;
             // each time through the inner loop
-        
+        }
         return w;
     }
 
@@ -341,8 +344,12 @@ public class WriteLoops {
     // where you are.
     public int tallyVote2() {
         int w = 0;
+        int idx = 0;
         int numberOfVotes = voteTallies.length;
-
+            while (idx<numberOfVotes){
+                System.out.println(voteTallies);
+                idx++;
+            }
 
             // calling
             w = w + 1;

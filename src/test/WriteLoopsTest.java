@@ -127,6 +127,17 @@ public class WriteLoopsTest
     public void Testloop50by7()
     {
         WriteLoops writeLoo1 = new WriteLoops();
-        assertEquals(56, writeLoo1.loop50by7());
+        assertEquals(7, writeLoo1.loop50by7());
+    }@Test
+    public void TesttallyVote1()
+    {
+        WriteLoops writeLoo1 = new WriteLoops();
+        assertEquals(13, writeLoo1.tallyVote1());
+    }@Test
+    public void TesttallyVote2()
+    {
+        WriteLoops writeLoo1 = new WriteLoops();
+        assertEquals(13, writeLoo1.tallyVote1());
     }
+
 }
