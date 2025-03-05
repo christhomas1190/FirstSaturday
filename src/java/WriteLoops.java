@@ -100,13 +100,18 @@ public class WriteLoops {
     public int helloZipCode() {
         int w = 0;
 
+            for(int i = 5; i <=105; i++){
+                if(i>51){
+                    System.out.println("Hello Zipcode");
+                }else{w = w + 1;}
+        }
         // Write a FOR loop that counts from 5 to 105. Put an IF
         // statement inside the loop that checks the
         // loop index counter and if it’s greater than 51,
         // prints “Hello Zipcode” instead of the statement w = w + 1;
 
                 // calling
-                w = w + 1;
+//                w = w + 1;
             // each time through the inner loop
         
         return w;
@@ -123,11 +128,13 @@ public class WriteLoops {
 
         // sample do...while loop
         i = 8;
-        do {
-            System.out.println("Eww.");
+        do {System.out.println("Eww.");
             i = i - 1;
         } while (i > 0);
         // what's the primary difference between them?!?
+        //The first loop will run through the loop before printing "eww"
+
+        //Ew will be printed multiple times in the second loop example.
     }
 
     // Write a WHILE loop that checks “gpsCurrentLocation()”
